@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No. of Seats - Engineering College</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: url('bkgd.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .navbar {
+            background-color: rgba(249, 240, 240, 0.8); /* Semi-transparent background */
+            z-index: 1000; /* Ensure it's above other content */
+            margin-bottom: 20px;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: black; /* Change link color to black */
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #333; /* Change hover color to a darker shade */
+        }
+        .navbar-brand {
+            color: black; /* Change brand text color to black */
+        }
+        .jumbotron {
+            background-color: black;
+            color: white;
+            padding: 2rem 1rem;
+            border-radius: 0;
+            margin-bottom: 30px; /* Ensure there's space below the jumbotron */
+        }
+        .section-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .container {
+            background-color: black; /* Change container background to black */
+            color: white; /* Ensure text inside the container is white */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        table {
+            background-color: white;
+            color: black;
+        }
+        .thead-dark th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="/static/svecww.jpg" alt="College Logo" width="50"> Sri Vishnu Engineering College for Women
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="/admissions">Admissions</a></li>
+                <li class="nav-item"><a class="nav-link" href="/feestructure">Fee Structure</a></li>
+                <li class="nav-item"><a class="nav-link" href="/seats">No. of Seats</a></li>
+                <li class="nav-item"><a class="nav-link" href="/placements">Placements</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Number of Seats</h1>
+        <p class="lead">Find out the number of seats available for each course at our college</p>
+    </div>
+
+    <!-- Number of Seats Content Section -->
+    <div class="container">
+        <h2 class="section-title text-center">Available Seats</h2>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Number of Seats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Computer Science Engineering</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Mechanical Engineering</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Electrical Engineering</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Civil Engineering</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Electronics and Communication Engineering</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Information Technology</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Custom JavaScript if needed
+    </script>
+
+</body>
+</html>

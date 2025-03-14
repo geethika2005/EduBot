@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Engineering College</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Background Image */
+        body {
+            background-image: url('bkgd.jpg'); /* Add your image path here */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Default text color */
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Lighter dark overlay */
+            z-index: -1; /* Place behind the content */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+        }
+        .navbar-nav .nav-link {
+            color: black;
+        }
+        .navbar-brand {
+            color: black;
+        }
+
+        /* Jumbotron Styles */
+        .jumbotron {
+            background-color: rgba(0, 0, 0, 0.8); /* Black semi-transparent background */
+            color: white;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Title Styles */
+        .section-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+            border: none; /* Remove card borders */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+        .card-title {
+            color: #333; /* Darker text for card titles */
+        }
+        .card ul {
+            list-style-type: none; /* Remove bullet points */
+            padding-left: 0; /* Remove left padding */
+        }
+        .card ul li {
+            padding: 5px 0; /* Add some padding to each list item */
+        }
+
+        /* Container Padding */
+        .container {
+            padding: 20px;
+            color: black; /* Default text color for containers */
+            background-color: rgba(255, 255, 255, 0.8); /* Light semi-transparent background for readability */
+            border-radius: 10px;
+        }
+
+        /* Reduce padding for small screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .overlay {
+                padding: 10px;
+            }
+        }
+
+        /* Reduce padding for large screens */
+        @media (min-width: 1200px) {
+            .container {
+                padding: 40px;
+            }
+            .overlay {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="/static/svecww.jpg" alt="College Logo" width="50"> Shri Vishnu Engineering College</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="/admissions">Admissions</a></li>
+                <li class="nav-item"><a class="nav-link" href="/feestructure">Fee Structure</a></li>
+                <li class="nav-item"><a class="nav-link" href="/seats">No. of Seats</a></li>
+                <li class="nav-item"><a class="nav-link" href="/placements">Placements</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Our Courses</h1>
+        <p class="lead">Explore the wide range of courses we offer</p>
+    </div>
+
+    <!-- Courses Section -->
+    <div id="courses" class="container">
+        <h2 class="section-title text-center">Courses and Subjects</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Science Engineering</h5>
+                        <ul>
+                            <li>Data Structures</li>
+                            <li>Algorithms</li>
+                            <li>Operating Systems</li>
+                            <li>Database Management Systems</li>
+                            <li>Computer Networks</li>
+                            <li>Software Engineering</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Machine Learning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Engineering</h5>
+                        <ul>
+                            <li>Circuit Theory</li>
+                            <li>Electromagnetics</li>
+                            <li>Control Systems</li>
+                            <li>Power Electronics</li>
+                            <li>Electrical Machines</li>
+                            <li>Power Systems</li>
+                            <li>Renewable Energy</li>
+                            <li>Signal Processing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Civil Engineering</h5>
+                        <ul>
+                            <li>Structural Analysis</li>
+                            <li>Geotechnical Engineering</li>
+                            <li>Transportation Engineering</li>
+                            <li>Water Resources Engineering</li>
+                            <li>Environmental Engineering</li>
+                            <li>Concrete Technology</li>
+                            <li>Surveying</li>
+                            <li>Construction Management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Information Technology</h5>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Networks and Security</li>
+                            <li>Software Testing</li>
+                            <li>Cloud Computing</li>
+                            <li>Mobile Computing</li>
+                            <li>Data Science</li>
+                            <li>Blockchain Technology</li>
+                            <li>Cyber Security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Mechanical Engineering</h5>
+                        <ul>
+                            <li>Thermodynamics</li>
+                            <li>Fluid Mechanics</li>
+                            <li>Heat Transfer</li>
+                            <li>Machine Design</li>
+                            <li>Manufacturing Processes</li>
+                            <li>Dynamics of Machinery</li>
+                            <li>Mechatronics</li>
+                            <li>Renewable Energy Systems</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Electronics and Communication Engineering</h5>
+                        <ul>
+                            <li>Analog Electronics</li>
+                            <li>Digital Signal Processing</li>
+                            <li>Microprocessors</li>
+                            <li>Telecommunication Systems</li>
+                            <li>VLSI Design</li>
+                            <li>Embedded Systems</li>
+                            <li>Wireless Communication</li>
+                            <li>Robotics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">AI & DS</h5>
+                        <ul>
+                            <li>Artificial Intelligence</li>
+                            <li>Data Mining</li>
+                            <li>Big Data Analytics</li>
+                            <li>Machine Learning</li>
+                            <li>Natural Language Processing</li>
+                            <li>Data Visualization</li>
+                            <li>Reinforcement Learning</li>
+                            <li>Deep Learning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card bg-light text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">AI & ML</h5>
+                        <ul>
+                            <li>Neural Networks</li>
+                            <li>Natural Language Processing</li>
+                            <li>Robotics</li>
+                            <li>Deep Learning</li>
+                            <li>Computer Vision</li>
+                            <li>AI Ethics</li>
+                            <li>Reinforcement Learning</li>
+                            <li>Pattern Recognition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Custom JavaScript if needed
+    </script>
+
+</body>
+</html>

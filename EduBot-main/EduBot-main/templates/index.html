@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering College</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Background Image */
+        body {
+            background-image: url('/static/b2.jpg'); /* Add your image path here */
+            background-size: cover;
+            background-position: center;
+            color: #333; /* Default text color */
+            position: relative;
+        }
+
+        /* Overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: -1; /* Place behind the content */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            margin-bottom: 20px;
+            background-color: rgba(253, 251, 249, 0.8); /* Semi-transparent white */
+        }
+        .navbar-nav .nav-link {
+            color: black;
+        }
+        .navbar-brand {
+            color: black;
+        }
+
+        /* Jumbotron Styles */
+        .jumbotron {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+            color: white;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+        }
+
+        /* Section Title Styles */
+        .section-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #333; /* Black color for section titles */
+        }
+
+        /* Card Styles */
+        .card {
+            margin-bottom: 20px;
+            border: none; /* Remove card borders */
+        }
+        .card-title {
+            color: #333; /* Darker text for card titles */
+        }
+
+        /* Section Overlays */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Container Padding */
+        .container {
+            padding: 20px;
+        }
+
+        /* Reduce padding for small screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .overlay {
+                padding: 10px;
+            }
+        }
+
+        /* Reduce padding for large screens */
+        @media (min-width: 1200px) {
+            .container {
+                padding: 40px;
+            }
+            .overlay {
+                padding: 30px;
+            }
+        }
+
+        /* Chatbot Styles */
+        .chat-container {
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            width: 300px;
+            max-width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f7f7f7;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .chat-input button {
+            margin-left: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* User and Bot Message Styles */
+        .user-message {
+            background-color: #d1e7dd; /* Light green */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .bot-message {
+            background-color: #e2e3e5; /* Light gray */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#"><img src="/static/svecww.jpg" alt="College Logo" width="50">Shri Vishnu Engineering College for Women</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admissions">Admissions</a></li>
+            <li class="nav-item"><a class="nav-link" href="/feestructure">Fee Structure</a></li>
+            <li class="nav-item"><a class="nav-link" href="/seats">No. of Seats</a></li>
+            <li class="nav-item"><a class="nav-link" href="/placements">Placements</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <!-- Header -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to Shri Vishnu Engineering College for Women</h1>
+        <p class="lead">Excellence in Education and Research</p>
+    </div>
+
+    <!-- Courses Section -->
+    <div id="courses" class="container">
+        <div class="overlay">
+            <h2 class="section-title text-center">Courses</h2>
+            <p class="text-center">Explore the wide range of courses we offer.</p>
+        </div>
+    </div>
+
+    <!-- Admissions Section -->
+    <div id="admissions" class="container">
+        <div class="overlay">
+            <h2 class="section-title text-center">Admissions</h2>
+            <p class="text-center">Find out how to apply to our college and what requirements are needed.</p>
+        </div>
+    </div>
+
+    <!-- Fee Structure Section -->
+    <div id="fee-structure" class="container">
+        <div class="overlay">
+            <h2 class="section-title text-center">Fee Structure</h2>
+            <p class="text-center">Learn about the fees for different courses and financial aid options.</p>
+        </div>
+    </div>
+
+    <!-- Number of Seats Section -->
+    <div id="seats" class="container">
+        <div class="overlay">
+            <h2 class="section-title text-center">No. of Seats</h2>
+            <p class="text-center">Check the availability of seats in various courses.</p>
+        </div>
+    </div>
+
+    <!-- Placements Section -->
+    <div id="placements" class="container">
+        <div class="overlay">
+            <h2 class="section-title text-center">Placements</h2>
+            <p class="text-center">Explore our placement opportunities and statistics.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container">
+        <div class="overlay">
+            <h2 class="section-title text-center">Contact Us</h2>
+            <p class="text-center">Get in touch with us for more information.</p>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chat-container">
+        <div class="chat-header">EDUBOT</div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input id="user-input" type="text" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById('user-input').value;
+            if (userInput) {
+                // Append user message to chat
+                var chatMessages = document.getElementById('chat-messages');
+                var userMessage = document.createElement('div');
+                userMessage.textContent = 'You: ' + userInput;
+                userMessage.classList.add('user-message'); // Apply user message style
+                chatMessages.appendChild(userMessage);
+
+                // Clear input
+                document.getElementById('user-input').value = '';
+
+                // Send message to Flask server
+                fetch('/message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ "message": userInput })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(message => {
+                        var botMessage = document.createElement('div');
+                        botMessage.textContent = 'Bot: ' + message.text;
+                        botMessage.classList.add('bot-message'); // Apply bot message style
+                        chatMessages.appendChild(botMessage);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: college information path
+  steps:
+    - intent: college_name
+    - action: utter_college_name
+
+- story: college branches path
+  steps:
+    - intent: college_branches
+    - action: utter_college_branches
+
+- story: college placements path
+  steps:
+    - intent: college_placements
+    - action: utter_college_placements
+
+- story: college facilities path
+  steps:
+    - intent: college_facilities
+    - action: utter_college_facilities
+
+- story: fee structure path
+  steps:
+    - intent: fee_structure
+    - action: utter_fee_structure
+
+- story: admission procedure path
+  steps:
+    - intent: admission_procedure
+    - action: utter_admission_procedure
+
+- story: principal path
+  steps:
+    - intent: principal
+    - action: utter_principal
+
+- story: chairman path
+  steps:
+    - intent: chairman
+    - action: utter_chairman
+
+- story: contact details path
+  steps:
+    - intent: contact_details
+    - action: utter_contact_details

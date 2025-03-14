@@ -1,0 +1,145 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: 
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: college_name
+  examples: |
+    - What is the name of the college?
+    - Tell me the college name.
+    - What is the name of your institution?
+
+- intent: college_branches
+  examples: |
+    - What branches does the college offer?
+    - List the branches available in the college.
+    - What are the engineering branches?
+
+- intent: college_placements
+  examples: |
+    - What are the recent placement statistics?
+    - Tell me about the placements.
+    - How many students got placed recently?
+
+- intent: college_facilities
+  examples: |
+    - What facilities are available in the college?
+    - Tell me about the college facilities.
+    - What are the amenities provided?
+
+- intent: fee_structure
+  examples: |
+    - What is the fee structure?
+    - How much is the annual fee?
+    - Can you tell me about the fee details?
+
+- intent: admission_procedure
+  examples: |
+    - How do I get admitted to the college?
+    - What is the admission procedure?
+    - Tell me about the admission process.
+
+- intent: principal
+  examples: |
+    - Who is the principal of the college?
+    - Can you tell me the principal's name?
+    - Who is the head of the institution?
+
+- intent: chairman
+  examples: |
+    - Who is the chairman of the college?
+    - Tell me about the chairman.
+    - Who is the chairman of the institution?
+
+- intent: contact_details
+  examples: |
+    - What are the contact details of the college?
+    - How can I reach the college?
+    - Give me the contact information for the college.

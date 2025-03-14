@@ -1,0 +1,58 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond with college name
+  steps:
+    - intent: college_name
+    - action: utter_college_name
+
+- rule: Respond with college branches
+  steps:
+    - intent: college_branches
+    - action: utter_college_branches
+
+- rule: Respond with college placements
+  steps:
+    - intent: college_placements
+    - action: utter_college_placements
+
+- rule: Respond with college facilities
+  steps:
+    - intent: college_facilities
+    - action: utter_college_facilities
+
+- rule: Respond with fee structure
+  steps:
+    - intent: fee_structure
+    - action: utter_fee_structure
+
+- rule: Respond with admission procedure
+  steps:
+    - intent: admission_procedure
+    - action: utter_admission_procedure
+
+- rule: Respond with principal information
+  steps:
+    - intent: principal
+    - action: utter_principal
+
+- rule: Respond with chairman information
+  steps:
+    - intent: chairman
+    - action: utter_chairman
+
+- rule: Respond with contact details
+  steps:
+    - intent: contact_details
+    - action: utter_contact_details

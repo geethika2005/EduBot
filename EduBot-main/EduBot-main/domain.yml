@@ -1,0 +1,126 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - college_name
+  - college_branches
+  - college_placements
+  - college_facilities
+  - fee_structure
+  - admission_procedure
+  - principal
+  - chairman
+  - contact_details
+
+entities:
+  - college_name
+  - college_branch
+  - placement_info
+  - fee_info
+  - admission_info
+  - principal_name
+  - chairman_name
+  - contact_info
+
+slots:
+  college_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: college_name
+  college_branch:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: college_branch
+  placement_info:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: placement_info
+  fee_info:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: fee_info
+  admission_info:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: admission_info
+  principal_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: principal_name
+  chairman_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: chairman_name
+  contact_info:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: contact_info
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_college_name:
+  - text: "The name of the college is Shri Vishnu Engineering College for Women."
+
+  utter_college_branches:
+  - text: "The college offers branches including Computer Science, Electronics, Mechanical, and Civil Engineering."
+
+  utter_college_placements:
+  - text: "The college has a strong placement record with many students getting placed in top companies. Recent placement details: 1474 students in 2023, 1892 students in 2022, 933 students in 2021, and 789 students in 2020."
+
+  utter_college_facilities:
+  - text: "The college provides facilities such as a library, hostel, sports complex, and modern laboratories."
+
+  utter_fee_structure:
+  - text: "The fee structure is Rs.77,000/- per year. Branch-wise details are as follows: CSE [AI & DS] :: 120, CSE [AI & ML] :: 120, CSE [Cyber Security] :: 60, CSE :: 180, IT :: 180, ECE :: 120, EEE :: 60, CE :: 60, ME :: 60."
+
+  utter_admission_procedure:
+  - text: "Admission is based on EAPCET marks and counseling. Lateral Entry Admissions are through ECET counseling. Candidates should have passed 10+2 with Physics & Mathematics and a minimum of 50% marks."
+
+  utter_principal:
+  - text: "The principal of Shri Vishnu Engineering College for Women is G. Srinivasarao."
+
+  utter_chairman:
+  - text: "The chairman of Shri Vishnu Engineering College for Women is Sri. K.V. Vishnu Raju."
+
+  utter_contact_details:
+  - text: "Contact us at: Phone: 08816 – 250864, Fax: 08816 – 250099, Email: info@svecw.edu.in, principal@svecw.edu.in. Address: Vishnupur, BHIMAVARAM – 534202, West Godavari District, Andhra Pradesh, India."
+
+
+actions:
+  - action_college_info
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
